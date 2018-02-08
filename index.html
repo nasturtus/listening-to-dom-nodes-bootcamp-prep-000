@@ -9,6 +9,18 @@
        min-height: 12px;
      }
     </style>
+    
+    <script>
+      var divs = document.querySelectorAll('divs')  
+      function bubble(e) {
+        this.stopPropagation()
+        console.log(this.firstChild.nodeValue.trim() + 'bubbled')
+      }
+      for(var i = 0; i < divs.length; i++){
+        divs[i].addEventListener('click', bubble)
+      }
+    </script>  
+    
   </head>
 
   <body>
